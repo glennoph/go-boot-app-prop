@@ -31,6 +31,11 @@ public class GoBootAppPropApplication {
 		String username = ctx.getEnvironment().getProperty("username");
 		System.out.println("=>>>> " + username);
 
+		System.out.println("-------------- configuration ");
+		AppConfiguration appConfiguration = ctx.getBean(AppConfiguration.class);
+		System.out.println("appConfiguration username : " + appConfiguration.getUsername());
+		System.out.println("appConfiguration password : " + appConfiguration.getPassword());
+
 	}
 
 }
